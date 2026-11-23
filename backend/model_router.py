@@ -12,11 +12,11 @@ from backend.models import ModelConfig
 USAGE_LOG_FILE = DATA_DIR / "token_usage.json"
 
 PRICING_PER_1K = {
-    "gpt-4o": {"input": 0.0025, "output": 0.010},
-    "gpt-4o-mini": {"input": 0.00015, "output": 0.0006},
-    "gemini-2.5-pro": {"input": 0.00125, "output": 0.005},
+    "gemini-2.5-flash": {"input": 0.0025, "output": 0.010},
+    "gemini-2.5-flash": {"input": 0.00015, "output": 0.0006},
+    "gemini-2.5-flash": {"input": 0.00125, "output": 0.005},
     "gemini-2.5-flash": {"input": 0.000075, "output": 0.0003},
-    "claude-3-5-sonnet": {"input": 0.003, "output": 0.015},
+    "gemini-2.5-flash": {"input": 0.003, "output": 0.015},
     "ollama/llama3": {"input": 0.0, "output": 0.0},
     "mock-model": {"input": 0.0, "output": 0.0},
 }
@@ -57,7 +57,7 @@ class ModelRouter:
         if task_complexity == "HIGH" and agent_cfg.provider == "gemini" and "flash" in agent_cfg.primary_model:
             return ModelConfig(
                 provider=agent_cfg.provider,
-                primary_model="gemini-2.5-pro",
+                primary_model="gemini-2.5-flash",
                 fallback_model=agent_cfg.fallback_model,
                 temperature=agent_cfg.temperature
             )
@@ -97,7 +97,7 @@ class ModelRouter:
 
     async def _call_live_provider(self, provider: str, model: str, system_prompt: str, user_prompt: str, temperature: float) -> Optional[str]:
         async with httpx.AsyncClient(timeout=45.0) as client:
-            if provider == "openai" and OPENAI_API_KEY:
+            if provider == "gemini" and OPENAI_API_KEY:
                 resp = await client.post(
                     "https://api.openai.com/v1/chat/completions",
                     headers={"Authorization": f"Bearer {OPENAI_API_KEY}"},
@@ -125,7 +125,7 @@ class ModelRouter:
                 resp.raise_for_status()
                 return resp.json()["candidates"][0]["content"]["parts"][0]["text"]
 
-            if provider == "anthropic" and ANTHROPIC_API_KEY:
+            if provider == "gemini" and ANTHROPIC_API_KEY:
                 resp = await client.post(
                     "https://api.anthropic.com/v1/messages",
                     headers={

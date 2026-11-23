@@ -12,7 +12,7 @@ def seed_initial_data(engine: WorkforceEngine, scheduler: WorkflowScheduler):
             role="Executive Orchestrator & Deliverable Synthesizer",
             persona="Strategic operations leader who decomposes complex business goals into parallel task DAGs, verifies cross-agent outputs, and ensures board-ready quality.",
             instructions="Break requests into parallelizable tasks, enforce memory constraints, resolve agent disagreements, and assemble cohesive final reports.",
-            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-pro", fallback_model="gpt-4o"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=["market_research", "presentation_creation", "financial_modelling"],
             allowed_tools=["web_research", "notion_create_page"],
             permission_level="CONTROLLED_ACCESS",
@@ -24,7 +24,7 @@ def seed_initial_data(engine: WorkforceEngine, scheduler: WorkflowScheduler):
             role="K-12 & EdTech Market Researcher",
             persona="Data-driven Indian EdTech market strategist specializing in Class 9-12 student behavior, NEP 2020 career discovery, and Aspirations positioning.",
             instructions="Gather evidence-backed market intelligence on student/parent segments, pricing tiers, and product gaps.",
-            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gpt-4o-mini"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=["market_research", "competitor_analysis"],
             allowed_tools=["web_research"],
             permission_level="FULL_ACCESS"
@@ -35,7 +35,7 @@ def seed_initial_data(engine: WorkforceEngine, scheduler: WorkflowScheduler):
             role="Study Abroad & Competitor Benchmarking Specialist",
             persona="Sharp competitive analyst tracking Leverage Edu, IDP, Mindler, Univariety, and iDreamCareer.",
             instructions="Compare competitor offerings, pricing, CAC channels, and positioning against MeetUniversity product lines.",
-            model_config_data=ModelConfig(provider="openai", primary_model="gpt-4o-mini", fallback_model="gemini-2.5-flash"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=["competitor_analysis", "market_research"],
             allowed_tools=["web_research", "slack_post_message"],
             permission_level="ASK_FIRST"
@@ -46,7 +46,7 @@ def seed_initial_data(engine: WorkforceEngine, scheduler: WorkflowScheduler):
             role="Student Acquisition & Brand Strategist",
             persona="Creative performance marketer crafting high-converting campaigns for Class 11 students and parents.",
             instructions="Translate audience pain points into clear messaging pillars, creative hooks, and full-funnel acquisition campaigns.",
-            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gpt-4o-mini"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=["market_research", "presentation_creation", "email_drafting"],
             allowed_tools=["web_research", "notion_create_page"],
             permission_level="CONTROLLED_ACCESS"
@@ -57,7 +57,7 @@ def seed_initial_data(engine: WorkforceEngine, scheduler: WorkflowScheduler):
             role="30-Day Content Calendar & Copy Specialist",
             persona="Gen-Z & parent-savvy copywriter producing Instagram Reels scripts, WhatsApp school flyers, and email sequences.",
             instructions="Deliver concrete day-by-day content calendars and ready-to-publish copy drafts.",
-            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gpt-4o-mini"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=["email_drafting", "presentation_creation"],
             allowed_tools=["notion_create_page"],
             permission_level="CONTROLLED_ACCESS"
@@ -68,7 +68,7 @@ def seed_initial_data(engine: WorkforceEngine, scheduler: WorkflowScheduler):
             role="Commercial Analytics & Financial Modelling Lead",
             persona="Quantitative business analyst fluent in funnel conversion metrics, cohort LTV, ROAS, and INR/USD unit economics.",
             instructions="Run exact spreadsheet computations using spreadsheet_analyzer, pinpoint funnel leakage, and quantify revenue upside.",
-            model_config_data=ModelConfig(provider="openai", primary_model="gpt-4o", fallback_model="gemini-2.5-pro"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=["data_analysis", "financial_modelling"],
             allowed_tools=["spreadsheet_analyzer"],
             permission_level="FULL_ACCESS"
@@ -79,7 +79,7 @@ def seed_initial_data(engine: WorkforceEngine, scheduler: WorkflowScheduler):
             role="Repository Architecture & Engineering Lead",
             persona="Pragmatic systems engineer inspecting repositories, diagnosing concurrency/security risks, and authoring clean pull requests.",
             instructions="Inspect GitHub repositories thoroughly, prioritize technical debt, and request human approval before opening PRs or modifying code.",
-            model_config_data=ModelConfig(provider="anthropic", primary_model="claude-3-5-sonnet", fallback_model="gpt-4o"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=["code_review"],
             allowed_tools=["github_inspect", "github_create_pr"],
             permission_level="ASK_FIRST"
@@ -90,7 +90,7 @@ def seed_initial_data(engine: WorkforceEngine, scheduler: WorkflowScheduler):
             role="Verification, Reliability & Compliance Reviewer",
             persona="Meticulous quality and security reviewer validating engineering plans, test coverage, and permission boundaries.",
             instructions="Challenge unverified claims, review proposed code changes, and ensure zero unauthorized external side effects.",
-            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gpt-4o-mini"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=["code_review", "data_analysis"],
             allowed_tools=["github_inspect"],
             permission_level="FULL_ACCESS"
@@ -101,7 +101,7 @@ def seed_initial_data(engine: WorkforceEngine, scheduler: WorkflowScheduler):
             role="B2B School Alliances & Lead Generation",
             persona="Relationship-driven B2B education partnerships lead connecting with CBSE/ICSE school principals.",
             instructions="Identify target partner schools, draft tailored outreach emails, and always obtain human approval before sending external emails.",
-            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gpt-4o-mini"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=["lead_generation", "email_drafting"],
             allowed_tools=["web_research", "gmail_send_email", "slack_post_message"],
             permission_level="ASK_FIRST"

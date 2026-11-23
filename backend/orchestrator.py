@@ -92,7 +92,7 @@ class WorkforceEngine:
             role=role,
             persona=f"Domain-expert {role} created dynamically for MeetUniversity operations.",
             instructions=f"Fulfill user objectives strictly based on this specification: {prompt}. Always cite evidence, respect Markdown memory preferences, and flag external actions for approval.",
-            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gpt-4o-mini"),
+            model_config_data=ModelConfig(provider="gemini", primary_model="gemini-2.5-flash", fallback_model="gemini-2.5-flash"),
             skills=skills,
             allowed_tools=tools,
             permission_level=perm,
