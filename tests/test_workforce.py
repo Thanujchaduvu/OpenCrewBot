@@ -26,7 +26,9 @@ async def test_end_to_end_workforce():
         "room_revops_analytics",
         "Analyse the MeetUniversity sales spreadsheet and identify conversion bottlenecks."
     )
-    await asyncio.sleep(0.8)
+    for _ in range(30):
+        if engine.get_run(run_biz.run_id).status in ('COMPLETED', 'FAILED'): break
+        await asyncio.sleep(0.5)
     completed_biz = engine.get_run(run_biz.run_id)
     assert completed_biz.status == "COMPLETED"
     assert "Aspirations" in completed_biz.final_deliverable
@@ -36,7 +38,9 @@ async def test_end_to_end_workforce():
         "room_growth_studio",
         "Send email outreach to principal@dps-partner.example.com for MeetUniversity Aspirations."
     )
-    await asyncio.sleep(0.6)
+    for _ in range(30):
+        if engine.get_run(run_ext.run_id).status in ('PAUSED_APPROVAL', 'COMPLETED', 'FAILED'): break
+        await asyncio.sleep(0.5)
     paused_run = engine.get_run(run_ext.run_id)
     assert paused_run.status == "PAUSED_APPROVAL"
 
@@ -46,7 +50,9 @@ async def test_end_to_end_workforce():
     # Reject the action and verify it NEVER executes
     engine.governance.resolve_approval(pending[0].approval_id, "REJECTED", "Test Auditor")
     await engine.resume_run(run_ext.run_id)
-    await asyncio.sleep(0.6)
+    for _ in range(30):
+        if engine.get_run(run_ext.run_id).status in ('PAUSED_APPROVAL', 'COMPLETED', 'FAILED'): break
+        await asyncio.sleep(0.5)
     final_ext = engine.get_run(run_ext.run_id)
     assert final_ext.status == "FAILED"
     assert "REJECTED" in final_ext.tasks[-1].error
