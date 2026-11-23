@@ -1,0 +1,14 @@
+{
+  "id": "room_engineering_ops",
+  "name": "Engineering & Repo Ops Room",
+  "description": "GitHub repository audits, technical roadmaps, and approval-gated pull requests.",
+  "project_id": "meetuniversity",
+  "agent_ids": [
+    "chief_of_staff",
+    "tech_lead",
+    "qa_architect"
+  ],
+  "max_turns_per_task": 6,
+  "max_delegation_depth": 3,
+  "messages": []
+}

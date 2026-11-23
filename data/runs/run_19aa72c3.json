@@ -1,0 +1,85 @@
+{
+  "run_id": "run_19aa72c3",
+  "room_id": "room_growth_studio",
+  "project_id": "meetuniversity",
+  "instruction": "Create a marketing campaign targeting Class 11 students for MeetUniversity Aspirations with audience research, creative concepts, and a 30-day content calendar.",
+  "status": "COMPLETED",
+  "tasks": [
+    {
+      "task_id": "task_cmp_1",
+      "title": "Parallel: Class 11 Student & Parent Audience Pain-Point Research",
+      "description": "Identify academic stream anxiety, career confusion, and decision triggers for Class 11 students in India.",
+      "assigned_agent": "market_intel_lead",
+      "dependencies": [],
+      "required_skills": [
+        "market_research"
+      ],
+      "tool_calls": [
+        {
+          "tool": "web_research",
+          "payload": {
+            "query": "Class 11 student career confusion stream selection India EdTech"
+          }
+        }
+      ],
+      "requires_approval": false,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 2,
+      "timeout_seconds": 60,
+      "started_at": "2026-11-23T08:18:03.326855Z",
+      "completed_at": "2026-11-23T08:18:03.346375Z",
+      "output": "### Class 11 Audience Research \u2014 MeetUniversity Aspirations\n\n> **Active Memory Constraints Applied:** - **Remembered:** Always highlight Hyderabad and Bangalore regional hubs. | - **Remembered:** Completed run 'run_a2ba21a9' for instruction: Send email outreach to principal@dps-partner.example.com for MeetUniversity Aspirations. | - **Remembered:** Completed run 'run_26742ba6' for instruction: Send email outreach to principal@dps-partner.example.com for MeetUniversity Aspirations.\n\n- **Primary Concerns:** Stream lock-in regret (Science vs. Commerce vs. Humanities), parental pressure around JEE/NEET vs. emerging careers, and lack of clarity on global undergraduate prerequisites.\n- **Decision Makers:** Dual-audience funnel \u2014 Students discover via Instagram Reels/YouTube Shorts; Parents validate via WhatsApp brochures and School Principal webinars.",
+      "error": null
+    },
+    {
+      "task_id": "task_cmp_2",
+      "title": "Parallel: Aspirations Value Proposition & Messaging Pillars",
+      "description": "Define creative hooks, positioning angles, and school-to-home messaging for MeetUniversity Aspirations.",
+      "assigned_agent": "growth_marketer",
+      "dependencies": [],
+      "required_skills": [
+        "presentation_creation",
+        "email_drafting"
+      ],
+      "tool_calls": [],
+      "requires_approval": false,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 2,
+      "timeout_seconds": 60,
+      "started_at": "2026-11-23T08:18:03.363878Z",
+      "completed_at": "2026-11-23T08:18:03.395614Z",
+      "output": "### Campaign Strategy & Creative Concepts (`Aspirations \u2014 Future-Proof Class 11`)\n\n> **Active Memory Constraints Applied:** - **Remembered:** Always highlight Hyderabad and Bangalore regional hubs. | - **Remembered:** Completed run 'run_a2ba21a9' for instruction: Send email outreach to principal@dps-partner.example.com for MeetUniversity Aspirations. | - **Remembered:** Completed run 'run_26742ba6' for instruction: Send email outreach to principal@dps-partner.example.com for MeetUniversity Aspirations.\n\n- **Core Positioning:** *'Don't guess your next 10 years in Class 11. Test-drive careers before choosing your path.'*\n- **Concept 1 (Interactive Hook):** *The 7-Minute Career Blindspot Quiz* \u2014 reveals top 3 aligned careers + subject combinations.\n- **Concept 2 (Parent Trust):** *Beyond Engineering & Medicine: 2026 Global Career Map* live webinar with university admissions mentors.",
+      "error": null
+    },
+    {
+      "task_id": "task_cmp_3",
+      "title": "30-Day Multi-Channel Content Calendar & Sample Assets",
+      "description": "Build a 30-day Instagram/YouTube/WhatsApp/School-Webinar calendar and draft sample email/social copy.",
+      "assigned_agent": "content_creator",
+      "dependencies": [
+        "task_cmp_1",
+        "task_cmp_2"
+      ],
+      "required_skills": [
+        "email_drafting",
+        "presentation_creation"
+      ],
+      "tool_calls": [],
+      "requires_approval": false,
+      "status": "COMPLETED",
+      "retries": 0,
+      "max_retries": 2,
+      "timeout_seconds": 60,
+      "started_at": "2026-11-23T08:18:03.537686Z",
+      "completed_at": "2026-11-23T08:18:03.564302Z",
+      "output": "# MeetUniversity Aspirations \u2014 Class 11 Go-To-Market Campaign & 30-Day Calendar\n\n> **Active Memory Constraints Applied:** - **Remembered:** Always highlight Hyderabad and Bangalore regional hubs. | - **Remembered:** Completed run 'run_a2ba21a9' for instruction: Send email outreach to principal@dps-partner.example.com for MeetUniversity Aspirations. | - **Remembered:** Completed run 'run_26742ba6' for instruction: Send email outreach to principal@dps-partner.example.com for MeetUniversity Aspirations.\n\n## 1. Strategic Overview\nTarget 10,000+ Class 11 students and 2,500 parents across Tier-1 and Tier-2 CBSE/ICSE schools through a 4-week hook-educate-convert sprint.\n\n## 2. 30-Day Multi-Channel Content Calendar\n| Days | Theme | Channel | Deliverable / Hook | CTA |\n|---|---|---|---|---|\n| Days 1\u20137 | **Awareness: Stream Myth-Busting** | Instagram Reels & YouTube Shorts | 5 short videos debunking 'Only Science pays' with real salary data | Take Free Aspirations Diagnostic |\n| Days 8\u201314 | **Discovery: Career Blindspot Challenge** | Instagram Carousel + School WhatsApp | Interactive career-aptitude quiz & downloadable Subject Roadmap PDF | Book 1:1 Mentor Review |\n| Days 15\u201321 | **Parent Alignment Week** | Live Webinar + Email Drip | *'Class 11 Parent Blueprint: India vs. Global UG Admissions'* | Register Parent + Student Seat |\n| Days 22\u201330 | **Conversion & School Cohorts** | WhatsApp + Principal Outreach | Case studies of Class 11 alumni + limited cohort enrollment offer | Enroll in Aspirations Cohort |\n\n## 3. Sample Campaign Assets\n- **Instagram Hook:** *'Picked PCM/Commerce in Class 11 because your friends did? Here are 4 high-growth careers you can still unlock\u2014before boards hit.'*\n- **Parent Email Subject:** *Your child's Class 11 subject choices shape 2030 admissions \u2014 15-min Career Clarity Checklist inside.*",
+      "error": null
+    }
+  ],
+  "final_deliverable": "# MeetUniversity Aspirations \u2014 Class 11 Go-To-Market Campaign & 30-Day Calendar\n\n> **Active Memory Constraints Applied:** - **Remembered:** Always highlight Hyderabad and Bangalore regional hubs. | - **Remembered:** Completed run 'run_a2ba21a9' for instruction: Send email outreach to principal@dps-partner.example.com for MeetUniversity Aspirations. | - **Remembered:** Completed run 'run_26742ba6' for instruction: Send email outreach to principal@dps-partner.example.com for MeetUniversity Aspirations.\n\n## 1. Strategic Overview\nTarget 10,000+ Class 11 students and 2,500 parents across Tier-1 and Tier-2 CBSE/ICSE schools through a 4-week hook-educate-convert sprint.\n\n## 2. 30-Day Multi-Channel Content Calendar\n| Days | Theme | Channel | Deliverable / Hook | CTA |\n|---|---|---|---|---|\n| Days 1\u20137 | **Awareness: Stream Myth-Busting** | Instagram Reels & YouTube Shorts | 5 short videos debunking 'Only Science pays' with real salary data | Take Free Aspirations Diagnostic |\n| Days 8\u201314 | **Discovery: Career Blindspot Challenge** | Instagram Carousel + School WhatsApp | Interactive career-aptitude quiz & downloadable Subject Roadmap PDF | Book 1:1 Mentor Review |\n| Days 15\u201321 | **Parent Alignment Week** | Live Webinar + Email Drip | *'Class 11 Parent Blueprint: India vs. Global UG Admissions'* | Register Parent + Student Seat |\n| Days 22\u201330 | **Conversion & School Cohorts** | WhatsApp + Principal Outreach | Case studies of Class 11 alumni + limited cohort enrollment offer | Enroll in Aspirations Cohort |\n\n## 3. Sample Campaign Assets\n- **Instagram Hook:** *'Picked PCM/Commerce in Class 11 because your friends did? Here are 4 high-growth careers you can still unlock\u2014before boards hit.'*\n- **Parent Email Subject:** *Your child's Class 11 subject choices shape 2030 admissions \u2014 15-min Career Clarity Checklist inside.*",
+  "interruptions": [],
+  "created_at": "2026-11-23T08:18:03.289004Z",
+  "updated_at": "2026-11-23T08:18:03.684868Z"
+}

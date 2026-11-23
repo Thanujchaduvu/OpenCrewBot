@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenCrewBot 2.0 — Autonomous AI Workforce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+  <div class="min-h-screen flex flex-col">
+    <!-- Top Header -->
+    <header class="bg-white border-b border-slate-200 px-6 py-3 flex items-center justify-between sticky top-0 z-20 shadow-sm">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-indigo-600 text-white font-bold flex items-center justify-center shadow">OC</div>
+        <div>
+          <h1 class="text-lg font-bold text-slate-900 leading-tight">OpenCrewBot 2.0</h1>
+          <p class="text-xs text-slate-500">Autonomous AI Workforce Operating System &bull; MeetUniversity Edition</p>
+        </div>
+      </div>
+      <div id="status-badges" class="flex items-center gap-2 text-xs font-medium"></div>
+    </header>
+
+    <div class="flex flex-1">
+      <!-- Navigation Sidebar -->
+      <aside class="w-60 bg-white border-r border-slate-200 p-4 flex flex-col gap-1">
+        <button onclick="switchTab('rooms')" class="nav-btn active text-left px-3 py-2.5 rounded-lg text-sm font-medium bg-indigo-50 text-indigo-700" data-tab="rooms">1. Collaboration Rooms</button>
+        <button onclick="switchTab('tasks')" class="nav-btn text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100" data-tab="tasks">2. Task Execution & DAG</button>
+        <button onclick="switchTab('approvals')" class="nav-btn text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 flex justify-between items-center" data-tab="approvals">
+          <span>3. Approval Centre</span>
+          <span id="approval-pill" class="hidden bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full text-xs font-bold">0</span>
+        </button>
+        <button onclick="switchTab('agents')" class="nav-btn text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100" data-tab="agents">4. Agents & Dynamic Factory</button>
+        <button onclick="switchTab('memory')" class="nav-btn text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100" data-tab="memory">5. Markdown Memory Editor</button>
+        <button onclick="switchTab('skills')" class="nav-btn text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100" data-tab="skills">6. Skills & Integrations</button>
+        <button onclick="switchTab('workflows')" class="nav-btn text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100" data-tab="workflows">7. Scheduled Workflows</button>
+        <button onclick="switchTab('models')" class="nav-btn text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100" data-tab="models">8. Models & Cost Ledger</button>
+      </aside>
+
+      <!-- Main Workspace -->
+      <main class="flex-1 p-6 max-w-7xl mx-auto w-full">
+        <!-- TAB 1: COLLABORATION ROOMS -->
+        <section id="tab-rooms" class="tab-panel space-y-5">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div>
+                <h2 class="text-base font-bold text-slate-900">Multi-Agent Collaboration Room</h2>
+                <p class="text-xs text-slate-500">Issue a complex business instruction. Chief of Staff decomposes it into parallel DAG tasks.</p>
+              </div>
+              <select id="room-select" onchange="loadRoomDetails()" class="border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white font-medium"></select>
+            </div>
+
+            <!-- One-Click MeetUniversity Demo Presets -->
+            <div class="mb-4">
+              <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">MeetUniversity Demo Presets:</span>
+              <div class="flex flex-wrap gap-2">
+                <button onclick="fillPrompt('room_market_intel', 'Research the competitive landscape for MeetUniversity across K-12 career guidance and Study Abroad. Identify competitors, pricing, positioning, and strategic opportunities.')" class="text-xs bg-sky-50 text-sky-700 border border-sky-200 px-2.5 py-1.5 rounded-md hover:bg-sky-100">Demo 1: Market Intelligence</button>
+                <button onclick="fillPrompt('room_growth_studio', 'Create a marketing campaign targeting Class 11 students for MeetUniversity Aspirations with audience research, creative concepts, and a 30-day content calendar.')" class="text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1.5 rounded-md hover:bg-emerald-100">Demo 2: Class 11 Campaign</button>
+                <button onclick="fillPrompt('room_revops_analytics', 'Analyse the MeetUniversity sales spreadsheet, identify conversion bottlenecks, segment performance and revenue opportunities, and prepare recommendations.')" class="text-xs bg-purple-50 text-purple-700 border border-purple-200 px-2.5 py-1.5 rounded-md hover:bg-purple-100">Demo 3: Sales Spreadsheet Analysis</button>
+                <button onclick="fillPrompt('room_engineering_ops', 'Inspect the Studio1-OSS/OpenCrewBot GitHub repository, identify technical issues, prepare a prioritized development plan, and propose changes.')" class="text-xs bg-indigo-50 text-indigo-700 border border-indigo-200 px-2.5 py-1.5 rounded-md hover:bg-indigo-100">Demo 4: Repo Inspection & PR</button>
+                <button onclick="fillPrompt('room_market_intel', 'Remember that my preference is: always include INR Lakhs alongside USD in every executive summary.')" class="text-xs bg-amber-50 text-amber-800 border border-amber-200 px-2.5 py-1.5 rounded-md hover:bg-amber-100">Demo 6: Teach Memory Preference</button>
+                <button onclick="fillPrompt('room_growth_studio', 'Send email outreach to principal@dps-partner.example.com inviting Class 11 students to MeetUniversity Aspirations workshop.')" class="text-xs bg-rose-50 text-rose-700 border border-rose-200 px-2.5 py-1.5 rounded-md hover:bg-rose-100">Demo 7: External Email (Approval Test)</button>
+              </div>
+            </div>
+
+            <div class="flex gap-2">
+              <input id="instruction-input" type="text" placeholder="Give your AI workforce a complex business objective..." class="flex-1 border border-slate-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+              <button onclick="dispatchInstruction()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm shadow-sm">Launch Workforce</button>
+            </div>
+          </div>
+
+          <div id="room-feed" class="space-y-3"></div>
+        </section>
+
+        <!-- TAB 2: TASK EXECUTION & DAG DASHBOARD -->
+        <section id="tab-tasks" class="tab-panel hidden space-y-5">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <h2 class="text-base font-bold">Autonomous Task Execution Dashboard</h2>
+              <p class="text-xs text-slate-500">Live DAG task dependencies, parallel execution states, retries, and mid-run interruption controls.</p>
+            </div>
+            <button onclick="refreshAll()" class="text-xs bg-slate-100 hover:bg-slate-200 px-3 py-2 rounded-lg font-medium">Refresh Runs</button>
+          </div>
+          <div id="runs-container" class="space-y-4"></div>
+        </section>
+
+        <!-- TAB 3: HUMAN APPROVAL CENTRE -->
+        <section id="tab-approvals" class="tab-panel hidden space-y-5">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h2 class="text-base font-bold">Human Approval Centre & Security Audit Trail</h2>
+            <p class="text-xs text-slate-500">External actions are intercepted before execution. Rejected actions are strictly blocked and logged.</p>
+          </div>
+          <div id="approvals-list" class="space-y-3"></div>
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h3 class="text-sm font-bold mb-3">Immutable Security & Governance Audit Log</h3>
+            <div id="audit-list" class="space-y-2 max-h-80 overflow-y-auto text-xs font-mono"></div>
+          </div>
+        </section>
+
+        <!-- TAB 4: AGENTS & DYNAMIC AGENT FACTORY -->
+        <section id="tab-agents" class="tab-panel hidden space-y-5">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h2 class="text-base font-bold mb-1">Dynamic Agent Factory (Natural Language)</h2>
+            <p class="text-xs text-slate-500 mb-3">Describe a new specialist agent in plain English. It is instantiated immediately without editing source code.</p>
+            <div class="flex gap-2">
+              <input id="nl-agent-input" type="text" placeholder="e.g., Create an EdTech Pricing Strategist named Karan with controlled access and financial modelling skills" class="flex-1 border border-slate-300 rounded-lg px-4 py-2 text-sm" />
+              <button onclick="createDynamicAgent()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">Create Agent</button>
+            </div>
+          </div>
+          <div id="agents-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </section>
+
+        <!-- TAB 5: PERSISTENT MARKDOWN MEMORY MANAGER -->
+        <section id="tab-memory" class="tab-panel hidden space-y-5">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <h2 class="text-base font-bold">Persistent Provenance Markdown Memory</h2>
+                <p class="text-xs text-slate-500">Read and edit Markdown memory files directly. Changes take effect immediately on the next agent turn.</p>
+              </div>
+              <select id="memory-select" onchange="loadSelectedMemory()" class="border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white"></select>
+            </div>
+            <textarea id="memory-editor" rows="14" class="w-full font-mono text-xs border border-slate-300 rounded-lg p-3 bg-slate-50"></textarea>
+            <div class="flex justify-end">
+              <button onclick="saveSelectedMemory()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">Save Markdown Memory to Disk</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 6: SKILLS & INTEGRATIONS -->
+        <section id="tab-skills" class="tab-panel hidden space-y-5">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h2 class="text-base font-bold mb-3">Connected Integrations (Live vs. Simulated Status)</h2>
+            <div id="integrations-grid" class="grid grid-cols-1 md:grid-cols-3 gap-3"></div>
+          </div>
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h2 class="text-base font-bold mb-3">Reusable Markdown Skill Playbooks</h2>
+            <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+          </div>
+        </section>
+
+        <!-- TAB 7: SCHEDULED WORKFLOWS -->
+        <section id="tab-workflows" class="tab-panel hidden space-y-5">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+            <div>
+              <h2 class="text-base font-bold">Autonomous Scheduled AI Workflows</h2>
+              <p class="text-xs text-slate-500">Recurring cron routines with pause/resume controls, manual trigger, and execution history.</p>
+            </div>
+          </div>
+          <div id="workflows-list" class="space-y-3"></div>
+        </section>
+
+        <!-- TAB 8: MODELS & COST LEDGER -->
+        <section id="tab-models" class="tab-panel hidden space-y-5">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h2 class="text-base font-bold mb-2">Multi-Model Router & Token/Cost Ledger</h2>
+            <div id="usage-kpis" class="grid grid-cols-3 gap-4 my-4"></div>
+            <div id="usage-logs" class="text-xs font-mono space-y-1 max-h-96 overflow-y-auto"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

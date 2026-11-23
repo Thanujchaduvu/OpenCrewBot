@@ -1,0 +1,122 @@
+[
+  {
+    "timestamp": "2026-11-23T08:15:07.734305Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_076f41d5",
+    "task_id": "task_biz_1",
+    "agent_id": "biz_analyst",
+    "tool": "spreadsheet_analyzer",
+    "tier": "FULL_ACCESS"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:08.588346Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_a2ba21a9",
+    "task_id": "task_cmp_1",
+    "agent_id": "market_intel_lead",
+    "tool": "web_research",
+    "tier": "FULL_ACCESS"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:41.908933Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_43b0aad9",
+    "task_id": "task_biz_1",
+    "agent_id": "biz_analyst",
+    "tool": "spreadsheet_analyzer",
+    "tier": "FULL_ACCESS"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:42.761484Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_26742ba6",
+    "task_id": "task_cmp_1",
+    "agent_id": "market_intel_lead",
+    "tool": "web_research",
+    "tier": "FULL_ACCESS"
+  },
+  {
+    "timestamp": "2026-11-23T08:16:39.761034Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_726c0672",
+    "task_id": "task_biz_1",
+    "agent_id": "biz_analyst",
+    "tool": "spreadsheet_analyzer",
+    "tier": "FULL_ACCESS"
+  },
+  {
+    "timestamp": "2026-11-23T08:16:40.800646Z",
+    "event_type": "APPROVAL_REQUESTED",
+    "approval_id": "appr_c2f0cd93",
+    "run_id": "run_dcfadb43",
+    "task_id": "task_ext_2",
+    "tool": "gmail_send_email"
+  },
+  {
+    "timestamp": "2026-11-23T08:16:41.203139Z",
+    "event_type": "APPROVAL_REJECTED",
+    "approval_id": "appr_c2f0cd93",
+    "tool": "gmail_send_email",
+    "by": "Test Auditor"
+  },
+  {
+    "timestamp": "2026-11-23T08:16:41.262470Z",
+    "event_type": "TOOL_BLOCKED_REJECTED",
+    "approval_id": "appr_c2f0cd93",
+    "tool": "gmail_send_email"
+  },
+  {
+    "timestamp": "2026-11-23T08:17:55.098265Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_e5813cc4",
+    "task_id": "task_mkt_1",
+    "agent_id": "market_intel_lead",
+    "tool": "web_research",
+    "tier": "FULL_ACCESS"
+  },
+  {
+    "timestamp": "2026-11-23T08:17:55.170833Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_e5813cc4",
+    "task_id": "task_mkt_2",
+    "agent_id": "competitor_analyst",
+    "tool": "web_research",
+    "tier": "ASK_FIRST"
+  },
+  {
+    "timestamp": "2026-11-23T08:18:03.337148Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_19aa72c3",
+    "task_id": "task_cmp_1",
+    "agent_id": "market_intel_lead",
+    "tool": "web_research",
+    "tier": "FULL_ACCESS"
+  },
+  {
+    "timestamp": "2026-11-23T08:18:07.341131Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_37890682",
+    "task_id": "task_biz_1",
+    "agent_id": "biz_analyst",
+    "tool": "spreadsheet_analyzer",
+    "tier": "FULL_ACCESS"
+  },
+  {
+    "timestamp": "2026-11-23T08:28:46.977665Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_b7385644",
+    "task_id": "task_mkt_1",
+    "agent_id": "market_intel_lead",
+    "tool": "web_research",
+    "tier": "FULL_ACCESS"
+  },
+  {
+    "timestamp": "2026-11-23T08:28:47.047342Z",
+    "event_type": "TOOL_ALLOWED",
+    "run_id": "run_b7385644",
+    "task_id": "task_mkt_2",
+    "agent_id": "competitor_analyst",
+    "tool": "web_research",
+    "tier": "ASK_FIRST"
+  }
+]

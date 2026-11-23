@@ -1,0 +1,20 @@
+{
+  "workflow_id": "wf_weekly_competitor_pulse",
+  "name": "Weekly Competitor & Pricing Pulse",
+  "description": "Monitors Mindler, Univariety, Leverage Edu, and IDP Education for pricing/product updates and compiles an executive brief.",
+  "room_id": "room_market_intel",
+  "instruction": "Research the competitive landscape for MeetUniversity across K-12 career guidance and Study Abroad and summarize strategic shifts.",
+  "cron_schedule": "0 9 * * 1",
+  "status": "ACTIVE",
+  "last_run_at": "2026-11-23T08:28:46.923730Z",
+  "last_run_id": "run_b7385644",
+  "last_status": "TRIGGERED",
+  "run_history": [
+    {
+      "triggered_at": "2026-11-23T08:28:46.923730Z",
+      "run_id": "run_b7385644",
+      "status": "TRIGGERED",
+      "instruction": "Research the competitive landscape for MeetUniversity across K-12 career guidance and Study Abroad and summarize strategic shifts."
+    }
+  ]
+}

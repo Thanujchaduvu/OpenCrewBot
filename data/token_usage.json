@@ -1,0 +1,218 @@
+[
+  {
+    "timestamp": "2026-11-23T08:15:07.799373Z",
+    "provider": "mock",
+    "model": "gpt-4o",
+    "prompt_tokens": 1023,
+    "completion_tokens": 271,
+    "estimated_cost_usd": 0.005267,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:07.978346Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 704,
+    "completion_tokens": 492,
+    "estimated_cost_usd": 0.00334,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:08.618339Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 919,
+    "completion_tokens": 161,
+    "estimated_cost_usd": 0.001954,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:08.696126Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 448,
+    "completion_tokens": 170,
+    "estimated_cost_usd": 0.00141,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:08.889131Z",
+    "provider": "mock",
+    "model": "gemini-2.5-flash",
+    "prompt_tokens": 796,
+    "completion_tokens": 406,
+    "estimated_cost_usd": 0.000181,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:41.944746Z",
+    "provider": "mock",
+    "model": "gpt-4o",
+    "prompt_tokens": 1090,
+    "completion_tokens": 308,
+    "estimated_cost_usd": 0.005805,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:42.132376Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 807,
+    "completion_tokens": 566,
+    "estimated_cost_usd": 0.003839,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:42.780974Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 987,
+    "completion_tokens": 200,
+    "estimated_cost_usd": 0.002234,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:42.841331Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 516,
+    "completion_tokens": 209,
+    "estimated_cost_usd": 0.00169,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:15:43.033960Z",
+    "provider": "mock",
+    "model": "gemini-2.5-flash",
+    "prompt_tokens": 942,
+    "completion_tokens": 445,
+    "estimated_cost_usd": 0.000204,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:16:39.801466Z",
+    "provider": "mock",
+    "model": "gpt-4o",
+    "prompt_tokens": 1157,
+    "completion_tokens": 345,
+    "estimated_cost_usd": 0.006343,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:16:39.988023Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 911,
+    "completion_tokens": 640,
+    "estimated_cost_usd": 0.004339,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:16:40.616478Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 574,
+    "completion_tokens": 223,
+    "estimated_cost_usd": 0.001832,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:17:55.110133Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 936,
+    "completion_tokens": 244,
+    "estimated_cost_usd": 0.00239,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:17:55.193124Z",
+    "provider": "mock",
+    "model": "gpt-4o-mini",
+    "prompt_tokens": 864,
+    "completion_tokens": 206,
+    "estimated_cost_usd": 0.000253,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:17:55.373853Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 909,
+    "completion_tokens": 363,
+    "estimated_cost_usd": 0.002951,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:18:03.338924Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 1010,
+    "completion_tokens": 214,
+    "estimated_cost_usd": 0.002332,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:18:03.383259Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 539,
+    "completion_tokens": 223,
+    "estimated_cost_usd": 0.001789,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:18:03.555455Z",
+    "provider": "mock",
+    "model": "gemini-2.5-flash",
+    "prompt_tokens": 993,
+    "completion_tokens": 459,
+    "estimated_cost_usd": 0.000212,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:18:07.369968Z",
+    "provider": "mock",
+    "model": "gpt-4o",
+    "prompt_tokens": 1178,
+    "completion_tokens": 338,
+    "estimated_cost_usd": 0.006325,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:18:07.547339Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 926,
+    "completion_tokens": 627,
+    "estimated_cost_usd": 0.004293,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:28:46.989482Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 997,
+    "completion_tokens": 285,
+    "estimated_cost_usd": 0.002671,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:28:47.059358Z",
+    "provider": "mock",
+    "model": "gpt-4o-mini",
+    "prompt_tokens": 925,
+    "completion_tokens": 247,
+    "estimated_cost_usd": 0.000287,
+    "execution_mode": "SIMULATED"
+  },
+  {
+    "timestamp": "2026-11-23T08:28:47.201642Z",
+    "provider": "mock",
+    "model": "gemini-2.5-pro",
+    "prompt_tokens": 1053,
+    "completion_tokens": 404,
+    "estimated_cost_usd": 0.003336,
+    "execution_mode": "SIMULATED"
+  }
+]
