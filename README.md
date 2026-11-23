@@ -1,8 +1,5 @@
 # OpenCrewBot 2.0 — Autonomous AI Workforce Operating System
-
-> Built by extending the MIT-licensed [Studio1-OSS/OpenCrewBot](https://github.com/Studio1-OSS/OpenCrewBot) foundation into a multi-agent business workforce with DAG execution, persistent provenance Markdown memory, dynamic agent creation, human-in-the-loop governance, and multi-model routing.
-
----
+loom video Link: https://www.loom.com/share/edc286f6e6bd4f498a166d2316264519
 
 ## Quick Start (Local Setup)
 
@@ -53,3 +50,10 @@ pytest -v
 | **GitHub Repo Inspection & PRs** | **SIMULATED** | **LIVE** (GitHub REST API via `GITHUB_TOKEN`) |
 | **Gmail & Slack Outreach** | **SIMULATED** | **LIVE** (Gmail SMTP / Slack Webhook) |
 | **Web Research** | **SIMULATED** | **LIVE** (DuckDuckGo API) |
+<img width="1920" height="1080" alt="Screenshot (89)" src="https://github.com/user-attachments/assets/079bea92-10fb-42d0-82a2-0041879299ea" />
+<img width="1920" height="1080" alt="Screenshot (90)" src="https://github.com/user-attachments/assets/9407cc1f-b293-4218-bc9f-792eedb4938b" />
+<img width="1920" height="1080" alt="Screenshot (91)" src="https://github.com/user-attachments/assets/719e0ad6-1238-4eed-a971-51375f807f3d" />
+<img width="1920" height="1080" alt="Screenshot (92)" src="https://github.com/user-attachments/assets/2a0751ae-83f7-4832-ad72-08bce8c9bc9d" />
+<img width="1920" height="1080" alt="Screenshot (93)" src="https://github.com/user-attachments/assets/12a8e98d-862e-4442-a60d-d86e05b0cee1" />
+<img width="1920" height="1080" alt="Screenshot (94)" src="https://github.com/user-attachments/assets/e17fa91f-c888-4987-85be-31dbc63ddabf" />
+<img width="1920" height="1080" alt="Screenshot (95)" src="https://github.com/user-attachments/assets/326722dc-3b0f-4a68-b4d2-fed94c782f05" />
